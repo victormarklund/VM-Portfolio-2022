@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/css/index-v1-min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Libre+Baskerville:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <title>VM Portfolio</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+        <link rel="manifest" href="./site.webmanifest">
+    </head>
+
+    <body onclick>
+        <div id="loader"></div>
+        <div class="dynamic-bg"></div>
+
+        <nav>
+            <div class="logo-wrapper">
+                <a href="">
+                    <svg class="logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 61.8" preserveAspectRatio="none">
+                        <polygon class="logo__v" points="19.4,41.2 9.9,0 0.4,0 14.6,61.8 24.1,61.8 38.4,0 28.9,0"/>
+                        <polygon class="logo__m" points="90.5,0 69.2,38.1 47.9,0 38.4,0 38.4,61.8 47.9,61.8 47.9,17 64.5,46.6 74,46.6 90.5,17 90.5,61.8 100,61.8 100,0"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="g-nav-wrapper">
+                <ul class="g-nav">
+                    <li>
+                        <a href="#home">home</a>
+                    </li>
+                    <li>
+                        <a href="#work">work</a>
+                    </li>
+                    <li>
+                        <a href="#about-me">about me</a>
+                    </li>
+                    <li>
+                        <a href="#say-hi">say hi!</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <container id="home" class="flex-container">
+                <div class="home-wrapper">
+                    <p class="home-wrapper__intro">Hellö, my name is</p>
+                    <div class="home-wrapper__victor">
+                        <h1>Victor.</h1>
+                        <img src="./assets/img/victory-hand_270c-fe0f.png" alt="">
+                    </div>
+                    <div class="home-wrapper__ihelp">
+                        <h2>I help make stuff.</h2>
+                    </div>
+                    <div class="home-wrapper__desc">
+                        <p>I'm a recent digital media graduate who is looking for a new creative home where I can grow, make friends and help make awesome things.</p>
+                    </div>
+                </div>
+            </container>
+
+
+            <container id="work" class="flex-container">
+                <div class="work-wrapper">
+                    <h2>Some things I've made.</h2>
+                    <!--
+                    <p>(Click on the images to read more)</p>
+                    -->
+                    <!-- LJC -->
+                    <div class="work-card left">
+                        <a href="ljc.html">
+                            <img src="./assets/img/ljc-cover.png" alt="">
+                        </a>
+                        <div class="work-card-text">
+                            <h3>Lemon Juice Collective</br>(2020-2021)</h3>
+                            <p class="work-card-text__tasks"><strong>Role in team:</strong> founder, administration, planning and visuals</p>
+                            <p class="work-card-text__desc">A Discord community that I founded together with some friends at uni. The main goal was to help other creatives learn and grow together.</p>
+                        </div>
+                    </div>
+
+                    <!-- Jawima -->
+                    <div class="work-card right">
+                        <div class="work-card-text">
+                            <h3>Jawima Music</br>(2019-now)</h3>
+                            <p class="work-card-text__tasks"><strong>Solo project:</strong> Music production, mixing and mastering audio, designing cover art</p>
+                            <p class="work-card-text__desc">An ongoing passion project where I create music and release it for the world to hear. The music has been featured on playlists such as Lofi Beats by Spotify and BEATstrumentals by Apple Music.</p>
+                        </div>
+                        <a href="jawima.html">
+                            <img src="./assets/img/jwm-cover-comp.gif" alt="">
+                        </a>
+                    </div>
+
+                    <!-- Bloodmoon -->
+                    <div class="work-card left">
+                        <a href="bloodmoon.html">
+                            <img src="./assets/img/bloodmoon-cover.png" alt="">
+                        </a>
+                        <div class="work-card-text">
+                            <h3>Bloodmoon</br>(2021)</h3>
+                            <p class="work-card-text__tasks"><strong>Role in team: </strong>UI and wireframes</p>
+                            <p class="work-card-text__desc">A concept that I helped make together with 3 other students at Umeå university. My main role consisted of developing the looks and UI.</p>
+                        </div>
+                    </div>
+
+                    <!-- This Website -->
+                    <div class="work-card right">
+                        <div class="work-card-text">
+                            <h3>This website</br>(2022)</h3>
+                            <p class="work-card-text__tasks"><strong>Solo project: </strong>design and development</p>
+                            <p class="work-card-text__desc">A personal project where I designed and built this website using HTML, CSS and JS.</p>
+                        </div>
+                        <a href="thiswebsite.html">
+                            <img src="./assets/img/thiswebsite-cover.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </container>
+
+
+            <container id="about-me" class="flex-container">
+                <div class="about-me-wrapper">
+                    <div>
+                        <img class="about-me__pic" src="./assets/img/pic-of-me-by-ida-2.jpg" alt="">
+                    </div>
+                    <h2>About me.</h2>
+                    <div>
+                        <p>I am a curious 23 year old dude who is currently living in Luleå, Sweden together with my lovely partner. When I'm not doing stuff together with her, I spend most of my free time making music, playing video games, or learning new skills. I really value personal growth, so naturally I do everything I can to hold on to that childish urge to try new things.</br></br>I'm currently learning: React.js, basic cooking.</p>
+                    </div>
+                </div>
+            </container>
+
+
+            <container id="say-hi" class="flex-container">
+                <div class="say-hi-wrapper">
+                    <h2>Let's work together!</h2>
+                    <div class="say-hi__links">
+                        <a href="mailto:victormarklundd@gmail.com" target="_blank" rel="noopener noreferrer">mail</a>
+                        <p>or</p>
+                        <a href="https://www.linkedin.com/in/victor-marklund-3165121a2/" target="_blank" rel="noopener noreferrer">linkedin</a>
+                    </div>
+                </div>
+            </container>
+        </main>
+
+        <footer>
+            <p class="footer__credits footer__credits__left">Built by me</p>
+            <p class="footer__credits footer__credits__right">2022</p>
+        </footer>
+
+        <script src="./assets/js/jquery-3.6.1.min.js"></script>
+        <script src="./assets/js/anime.min.js"></script>
+        <script src="./assets/js/scrollreveal.min.js"></script>
+        <script src="./assets/js/index-v1-min.js"></script>
+    </body>
+</html>
