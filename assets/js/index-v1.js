@@ -9,6 +9,7 @@ document.onreadystatechange = function() {
     }
 };
 
+
 // Logo Hover
 let logoV = document.querySelector('.logo__v');
 let logoM = document.querySelector('.logo__m');
@@ -47,7 +48,7 @@ logoWrapper.addEventListener('mouseleave', (event) => {
 });
 
 
-// Page Load
+// Page Load Animation
 let nav = $('.g-nav-wrapper')
 let tlPageLoad = anime.timeline({
 });
