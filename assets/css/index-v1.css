@@ -1,4 +1,4 @@
-/* Standard Declarations */
+/* Reset */
 *,
 *::before,
 *::after {
@@ -6,15 +6,18 @@
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    /* Inspect box borders */
     /*
     outline: 3px solid rgba(255, 40, 50, 0.2);
     */
 }
+/* Init */
 html, body {
     position: relative;
     overflow-x: hidden;
     max-width: 100vw;
 }
+/* Variables */
 :root {
     --clr-black: #1C1C1C;
     --clr-white: #F4F4F4;
@@ -42,7 +45,7 @@ html, body {
     --navbar-logo-heigth: 30px;
     --navbar-menu-space: 10px;
 }
-
+/* Mobile: Menu spacing */
 @media screen and (max-width: 1000px) {
     :root {
         --navbar-menu-space: 5px;
@@ -67,6 +70,7 @@ footer {
     padding-right: var(--navbar-indents);
     z-index: 99;
 }
+/* Footer content */
 .footer__credits {
     display: inline;
     font-size: var(--fs-p);
@@ -93,7 +97,7 @@ footer {
 }
 
 
-/* Dynamic BG */
+/* Background */
 .dynamic-bg {
     position: fixed;
     height: 100vh;
@@ -391,6 +395,7 @@ h1, h2, h3, p, span, a {
 }
 
 
+/* ios :hover fix */
 @media (hover: none) {
     .g-nav li a:hover {
         color: var(--clr-black);

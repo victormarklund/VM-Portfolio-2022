@@ -34,7 +34,7 @@ tlPageLoad.add({
 }, 100);
 
 
-// Close Hover
+// Close Icon Hover
 let closeIcon = document.querySelector('.close');
 let logoWrapper = document.querySelector('.logo-wrapper');
 logoWrapper.addEventListener('mouseenter', (event) => {
