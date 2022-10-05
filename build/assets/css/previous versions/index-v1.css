@@ -45,6 +45,7 @@ html, body {
     --navbar-logo-heigth: 30px;
     --navbar-menu-space: 10px;
 }
+
 /* Mobile: Menu spacing */
 @media screen and (max-width: 1000px) {
     :root {

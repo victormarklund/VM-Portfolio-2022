@@ -1,0 +1,469 @@
+// VM Portfolio: Index.html
+
+
+// reset
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+
+    // outline: 3px solid rgba(255, 40, 50, 0.2);
+}
+
+
+// init HTML / body
+html, body {
+    position: relative;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+
+// variables
+// color
+$clr-primary: #F4F4F4;
+$clr-primary-variant: #F4F4F4;
+$clr-secondary: #003DFF;
+$clr-secondary-variant: #003DFF;
+$clr-background: #F4F4F4;
+$clr-surface: #F4F4F4;
+$clr-error: #B00020;
+$clr-onPrimary: #1C1C1C;
+$clr-onSecondary: #1C1C1C;
+$clr-onBackground: #1C1C1C;
+$clr-onSurface: #1C1C1C;
+$clr-onError: #F4F4F4;
+// font family
+$ff-primary: 'Inter', sans-serif;
+$ff-secondary: 'Libre Baskerville', serif;
+// font weight
+$fw-thin: 100;
+$fw-extraLight: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semiBold: 600;
+$fw-bold: 700;
+$fw-extraBold: 800;
+$fw-black: 900;
+// font size
+$fs-headline1: 3.5rem;
+$fs-headline2: 1.75rem;
+$fs-headline3: 1.50rem;
+$fs-subtitle1: 1.50rem;
+$fs-subtitle2: 1.25rem;
+$fs-body1: 1.0rem;
+$fs-body2: 0.85rem;
+$fs-description: 0.75rem;
+$fs-navigation: 1.0rem;
+$fs-socials: 3.5rem;
+$fs-credits: 0.75rem;
+// other
+$transition-time: 0.1s;
+// navbar
+$navbar-indents: 30px;
+$navbar-logo-heigth: 30px;
+$navbar-menu-space-desktop: 10px;
+$navbar-menu-space-mobile: 5px;
+// work cards
+$workcard-padding: 20px;
+$workcard-heigth: 200px;
+$workcard-heigth-mobile: 350px;
+$workcard-imgHeigth-mobile: 180px;
+$workcard-marginTop-mobile: 50px;
+
+
+// type system
+h1, h2, h3, h4, h5, h6, p, span, a, pre {font-family: $ff-primary;color: $clr-onBackground;}
+// headline1
+h1 {
+    font-weight: $fw-bold;
+    font-size: $fs-headline1;
+    letter-spacing: -0.094rem;
+}
+// headline2
+h2 {
+    font-weight: $fw-bold;
+    font-size: $fs-headline2;
+    letter-spacing: -0.031rem;
+}
+// headline3
+h3 {
+    font-weight: $fw-semiBold;
+    font-size: $fs-headline3;
+    letter-spacing: 0rem;
+}
+// subtitle1
+p.subtitle1, h2.subtitle1 {
+    font-weight: $fw-semiBold;
+    font-size: $fs-subtitle1;
+    letter-spacing: 0.009rem;
+}
+// subtitle2
+p.subtitle2 {
+    font-weight: $fw-regular;
+    font-size: $fs-subtitle2;
+    letter-spacing: 0.006rem;
+}
+// body1
+p.body1 {
+    font-weight: $fw-regular;
+    font-size: $fs-body1;
+    letter-spacing: 0.031rem;
+}
+// body2
+p.body2 {
+    font-weight: $fw-regular;
+    font-size: $fs-body2;
+    letter-spacing: 0.031rem;
+}
+// description
+p.description {
+    font-weight: $fw-regular;
+    font-size: $fs-description;
+    letter-spacing: 0.025rem;
+}
+// nav
+a.navigation {
+    font-weight: $fw-medium;
+    font-size: $fs-navigation;
+    letter-spacing: 0.025rem;
+}
+// socials
+a.socials {
+    font-weight: $fw-medium;
+    font-size: $fs-socials;
+    letter-spacing: 0.078rem;
+}
+// credits
+p.credits {
+    font-weight: $fw-regular;
+    font-size: $fs-credits;
+    letter-spacing: 0.025rem;
+}
+
+
+// nav + footer
+nav {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    z-index: 99;
+    background-color: $clr-background;
+}
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    padding-left: $navbar-indents;
+    padding-right: $navbar-indents;
+    z-index: 99;
+}
+// footer content
+.footer__credits {
+    display: inline;
+    transform: translateY(-50%);
+    margin-top: $navbar-indents;
+}
+.footer__credits__left {
+    float: left;
+}
+.footer__credits__right {
+    float: right;
+}
+
+
+// loader
+#loader {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99;
+    background-color: $clr-background;
+}
+
+
+// background
+.dynamic-bg {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -99;
+    background-color: $clr-background;
+}
+
+
+// navbar: logo
+.logo-wrapper {
+    float: left;
+    margin-top: $navbar-indents;
+    margin-left: $navbar-indents;
+    height: $navbar-logo-heigth;
+    opacity: 0;
+}
+.logo {
+    width: auto;
+    height: $navbar-logo-heigth;
+    fill: $clr-onBackground;
+    transition: $transition-time all;
+}
+.logo-wrapper:hover .logo {
+    fill: $clr-secondary;
+}
+
+
+// navbar: menu
+.g-nav-wrapper {
+    float: right;
+    margin-top: $navbar-indents;
+    margin-right: $navbar-indents;
+}
+.g-nav {
+    list-style: none;
+}
+.g-nav li {
+    display: inline;
+    margin-left: $navbar-menu-space-desktop;
+}
+// mobile: navbar menu spacing
+@media screen and (max-width: 1000px) {
+    .g-nav li {
+        margin-left: $navbar-menu-space-mobile;
+    }
+}
+.g-nav li a {
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: $transition-time all;
+}
+.g-nav li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: $clr-onBackground;
+    transition: $transition-time all;
+}
+.g-nav li a:hover {
+    color: $clr-secondary;
+}
+.g-nav li a:hover::after {
+    width: 100%;
+    background-color: $clr-secondary;
+}
+
+
+// flex container
+.flex-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+// home
+.home-wrapper {
+    width: 50vw;
+}
+.home-wrapper h1 {
+    font-family: $ff-secondary;
+    display: inline;
+}
+.home-wrapper__victor {
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+}
+.home-wrapper__victor img {
+    height: $fs-headline1;
+    transform: translateY(0.5rem);
+    transform-origin: center bottom;
+}
+.home-wrapper h2 {
+    display: inline;
+}
+.home-wrapper__ihelp {
+    white-space: nowrap;
+}
+.home-wrapper__desc {
+    min-width: 200px;
+    max-width: 50%;
+}
+
+
+// work
+.work-wrapper {
+    width: 50vw;
+    min-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.work-wrapper h2 {
+    margin-top: 100px;
+    text-align: left;
+}
+
+
+// work cards
+.work-card {
+    position: relative;
+    width: 100%;
+    min-height: $workcard-heigth;
+    margin-top: $workcard-padding;
+    display: flex;
+    flex-direction: row;
+}
+.left {
+    justify-content: left;
+    text-align: left;
+}
+.right {
+    justify-content: right;
+    text-align: right;
+}
+.work-card a img {
+    height: $workcard-heigth;
+    transition: $transition-time all ease;
+    box-shadow: 0px 0px $clr-onBackground;
+}
+.work-card a img:hover {
+    transform: translate3d(-5px, -5px, 0);
+    box-shadow: 10px 10px $clr-secondary;
+}
+.work-card-text{
+    width: 50%;
+    min-height: $workcard-heigth;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    justify-content: center;
+    padding-left: $workcard-padding;
+    padding-right: $workcard-padding;
+}
+.work-card-text h3::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: $clr-onBackground;
+}
+.work-card-text__tasks {
+    padding-bottom: 10px;
+}
+// mobile: work cards
+@media screen and (max-width: 1000px) {
+    .work-wrapper {
+        align-items: center;
+    }
+    .work-card {
+        width: 60vw;
+        min-height: $workcard-heigth;
+        flex-direction: column;
+        align-items: center;
+        margin-top: $workcard-marginTop-mobile;
+    }
+    .work-card a img {
+        order: 1;
+        height: $workcard-imgHeigth-mobile;
+    }
+    .work-card-text{
+        order: 2;
+        max-width: 50%;
+        min-width: 300px;
+        min-height: $workcard-heigth;
+        margin-top: $workcard-padding;
+        justify-content: left;
+    }
+    .left {
+        justify-content: left;
+        text-align: left;
+    }
+    .right {
+        justify-content: left;
+        text-align: left;
+    }
+}
+
+
+// about me
+.about-me-wrapper {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+.about-me__pic {
+    width: clamp(0px, 100%, 40rem);
+    box-shadow: 0px 10px $clr-secondary;
+    margin-bottom: 30px;
+}
+.about-me-wrapper h2 {
+    text-align: left;
+}
+
+
+// say hi!
+.say-hi-wrapper {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+.say-hi-wrapper h2 {
+    text-align: left;
+}
+.say-hi__links {
+    margin-top: 20px;
+}
+.say-hi__links p {
+    display: inline;
+    position: relative;
+    text-decoration: none;
+}
+.say-hi__links a {
+    display: inline;
+    position: relative;
+    text-decoration: none;
+    transition: $transition-time all;
+}
+.say-hi__links a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: $clr-onBackground;
+    transition: $transition-time all;
+}
+.say-hi__links a:hover {
+    color: $clr-secondary;
+}
+.say-hi__links a:hover::after {
+    width: 100%;
+    background-color: $clr-secondary;
+}
+
+
+// ios :hover fix
+@media (hover: none) {
+    .g-nav li a:hover {
+        color: $clr-onBackground;
+    }
+    .g-nav li a:hover::after {
+        width: 0%;
+        background-color: $clr-onBackground;
+    }
+}

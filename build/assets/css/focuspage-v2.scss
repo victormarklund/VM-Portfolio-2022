@@ -1,0 +1,361 @@
+// VM Portfolio: Focus pages
+
+
+// reset
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+
+    // outline: 3px solid rgba(255, 40, 50, 0.2);
+}
+
+
+// init HTML / body
+html, body {
+    position: relative;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+
+// variables
+// color
+$clr-primary: #F4F4F4;
+$clr-primary-variant: #F4F4F4;
+$clr-secondary: #003DFF;
+$clr-secondary-variant: #003DFF;
+$clr-background: #F4F4F4;
+$clr-surface: #F4F4F4;
+$clr-error: #B00020;
+$clr-onPrimary: #1C1C1C;
+$clr-onSecondary: #1C1C1C;
+$clr-onBackground: #1C1C1C;
+$clr-onSurface: #1C1C1C;
+$clr-onError: #F4F4F4;
+// font family
+$ff-primary: 'Inter', sans-serif;
+$ff-secondary: 'Libre Baskerville', serif;
+// font weight
+$fw-thin: 100;
+$fw-extraLight: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semiBold: 600;
+$fw-bold: 700;
+$fw-extraBold: 800;
+$fw-black: 900;
+// font size
+$fs-headline1: 3.5rem;
+$fs-headline2: 1.75rem;
+$fs-headline3: 1.50rem;
+$fs-subtitle1: 1.50rem;
+$fs-subtitle2: 1.0rem;
+$fs-body1: 1.0rem;
+$fs-body2: 0.85rem;
+$fs-description: 0.75rem;
+$fs-navigation: 1.0rem;
+$fs-socials: 1.5rem;
+$fs-credits: 0.75rem;
+// other
+$transition-time: 0.1s;
+// navbar
+$navbar-indents: 30px;
+$navbar-indents2: 15px;
+$navbar-logo-heigth: 30px;
+$navbar-menu-space-desktop: 10px;
+$navbar-menu-space-mobile: 5px;
+
+
+// type system
+h1, h2, h3, h4, h5, h6, p, span, a, pre {font-family: $ff-primary;color: $clr-onBackground;}
+// headline1
+h1 {
+    font-weight: $fw-bold;
+    font-size: $fs-headline1;
+    letter-spacing: -0.05rem;
+}
+// headline2
+h2 {
+    font-weight: $fw-bold;
+    font-size: $fs-headline1;
+    letter-spacing: -0.05rem;
+}
+// headline3
+h3 {
+    font-weight: $fw-semiBold;
+    font-size: $fs-headline3;
+    letter-spacing: 0rem;
+}
+// subtitle1
+p.subtitle1, h2.subtitle1 {
+    font-weight: $fw-semiBold;
+    font-size: $fs-subtitle1;
+    letter-spacing: 0.009rem;
+}
+// subtitle2
+p.subtitle2, h3.subtitle2 {
+    font-weight: $fw-regular;
+    font-size: $fs-subtitle2;
+    letter-spacing: 0.006rem;
+}
+// body1
+p.body1 {
+    font-weight: $fw-regular;
+    font-size: $fs-body1;
+    letter-spacing: 0.031rem;
+}
+// body2
+p.body2 {
+    font-weight: $fw-regular;
+    font-size: $fs-body2;
+    letter-spacing: 0.016rem;
+}
+// description
+p.description, h3.description {
+    font-weight: $fw-regular;
+    font-size: $fs-description;
+    letter-spacing: 0.025rem;
+}
+// nav
+a.navigation {
+    font-weight: $fw-medium;
+    font-size: $fs-navigation;
+    letter-spacing: 0.025rem;
+}
+// socials
+a.socials {
+    display: inline;
+    position: relative;
+    text-decoration: none;
+    transition: $transition-time all;
+    font-weight: $fw-medium;
+    font-size: $fs-socials;
+    letter-spacing: 0.078rem;
+    white-space: nowrap;
+}
+a.socials::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: $clr-onBackground;
+    transition: $transition-time all;
+}
+a.socials:hover {
+    color: $clr-secondary;
+}
+a.socials:hover::after {
+    width: 100%;
+    background-color: $clr-secondary;
+}
+// credits
+p.credits {
+    font-weight: $fw-regular;
+    font-size: $fs-credits;
+    letter-spacing: 0.025rem;
+}
+
+
+// nav + footer
+nav {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    z-index: 99;
+    background-color: $clr-background;
+}
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    padding-left: $navbar-indents;
+    padding-right: $navbar-indents;
+    z-index: 99;
+}
+// footer content
+.footer__credits {
+    display: inline;
+    transform: translateY(-50%);
+    margin-top: $navbar-indents;
+}
+.footer__credits__left {
+    float: left;
+}
+.footer__credits__right {
+    float: right;
+}
+
+
+// loader
+#loader {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99;
+    background-color: $clr-background;
+}
+
+
+// background
+.dynamic-bg {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -99;
+    background-color: $clr-background;
+}
+
+
+// navbar: close
+.logo-wrapper {
+    float: left;
+    margin-top: $navbar-indents2;
+    margin-left: $navbar-indents;
+    opacity: 0;
+}
+.close-wrapper {
+    transform-origin: center;
+}
+.close {
+    fill: $clr-onBackground;
+    transition: $transition-time all;
+}
+.logo-wrapper:hover .close {
+    fill: $clr-secondary;
+}
+
+
+// navbar: menu
+.g-nav-wrapper {
+    float: right;
+    margin-top: $navbar-indents;
+    margin-right: $navbar-indents;
+}
+.g-nav {
+    list-style: none;
+}
+.g-nav li {
+    display: inline;
+    margin-left: $navbar-menu-space-desktop;
+}
+// mobile: navbar menu spacing
+@media screen and (max-width: 1000px) {
+    .g-nav li {
+        margin-left: $navbar-menu-space-mobile;
+    }
+}
+.g-nav li a {
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: $transition-time all;
+}
+.g-nav li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: $clr-onBackground;
+    transition: $transition-time all;
+}
+.g-nav li a:hover {
+    color: $clr-secondary;
+}
+.g-nav li a:hover::after {
+    width: 100%;
+    background-color: $clr-secondary;
+}
+
+
+// flex container
+.flex-container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+#display {
+    margin-bottom: 400px;
+}
+
+
+// display
+.first {
+    margin-top: 80px;
+}
+.left {
+    text-align: left;
+}
+.center {
+    text-align: center;
+}
+.right {
+    text-align: right;
+}
+.print {
+    width: clamp(0px, 100%, 700px);
+    box-shadow: 0px 10px $clr-secondary;
+}
+.text-wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 50vw;
+    min-width: 300px;
+}
+.imgdesc-wrapper {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    max-width: 50vw;
+    min-width: 300px;
+}
+.text-wrapper h2::after, .text-wrapper h1::after {
+    content: '';
+    width: 50px;
+    height: 1px;
+    display: block;
+    background-color: $clr-onBackground;
+}
+.text-wrapper h3 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.text-wrapper p {
+    margin-top: 30px;
+}
+#display iframe {
+    width: clamp(0px, 100%, 700px);
+    height: 400px;
+}
+.webdev-takeaway {
+    font-family: $ff-secondary !important;
+    font-weight: $fw-medium !important;
+    font-size: $fs-headline2 !important;
+    color: $clr-secondary !important;
+}
+
+
+/* ios :hover fix */
+@media (hover: none) {
+    .g-nav li a:hover {
+        color: $clr-onBackground;
+    }
+    .g-nav li a:hover::after {
+        width: 0%;
+        background-color: $clr-onBackground;
+    }
+}
