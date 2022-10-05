@@ -1,0 +1,316 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, pre {
+  font-family: "Inter", sans-serif;
+  color: #1C1C1C;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  letter-spacing: -0.05rem;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  letter-spacing: -0.05rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0rem;
+}
+
+p.subtitle1, h2.subtitle1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.009rem;
+}
+
+p.subtitle2, h3.subtitle2 {
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.006rem;
+}
+
+p.body1 {
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.031rem;
+}
+
+p.body2 {
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 0.016rem;
+}
+
+p.description, h3.description {
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.025rem;
+}
+
+a.navigation {
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.025rem;
+}
+
+a.socials {
+  display: inline;
+  position: relative;
+  text-decoration: none;
+  transition: 0.1s all;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0.078rem;
+  white-space: nowrap;
+}
+
+a.socials::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #1C1C1C;
+  transition: 0.1s all;
+}
+
+a.socials:hover {
+  color: #003DFF;
+}
+
+a.socials:hover::after {
+  width: 100%;
+  background-color: #003DFF;
+}
+
+p.credits {
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.025rem;
+}
+
+nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 80px;
+  z-index: 99;
+  background-color: #F4F4F4;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  z-index: 99;
+}
+
+.footer__credits {
+  display: inline;
+  transform: translateY(-50%);
+  margin-top: 30px;
+}
+
+.footer__credits__left {
+  float: left;
+}
+
+.footer__credits__right {
+  float: right;
+}
+
+#loader {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99;
+  background-color: #F4F4F4;
+}
+
+.dynamic-bg {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -99;
+  background-color: #F4F4F4;
+}
+
+.logo-wrapper {
+  float: left;
+  margin-top: 15px;
+  margin-left: 30px;
+  opacity: 0;
+}
+
+.close-wrapper {
+  transform-origin: center;
+}
+
+.close {
+  fill: #1C1C1C;
+  transition: 0.1s all;
+}
+
+.logo-wrapper:hover .close {
+  fill: #003DFF;
+}
+
+.g-nav-wrapper {
+  float: right;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+.g-nav {
+  list-style: none;
+}
+
+.g-nav li {
+  display: inline;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .g-nav li {
+    margin-left: 5px;
+  }
+}
+.g-nav li a {
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: 0.1s all;
+}
+
+.g-nav li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #1C1C1C;
+  transition: 0.1s all;
+}
+
+.g-nav li a:hover {
+  color: #003DFF;
+}
+
+.g-nav li a:hover::after {
+  width: 100%;
+  background-color: #003DFF;
+}
+
+.flex-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#display {
+  margin-bottom: 400px;
+}
+
+.first {
+  margin-top: 80px;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.print {
+  width: clamp(0px, 100%, 700px);
+  box-shadow: 0px 10px #003DFF;
+}
+
+.text-wrapper {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 50vw;
+  min-width: 300px;
+}
+
+.imgdesc-wrapper {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  max-width: 50vw;
+  min-width: 300px;
+}
+
+.text-wrapper h2::after, .text-wrapper h1::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  display: block;
+  background-color: #1C1C1C;
+}
+
+.text-wrapper h3 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.text-wrapper p {
+  margin-top: 30px;
+}
+
+#display iframe {
+  width: clamp(0px, 100%, 700px);
+  height: 400px;
+}
+
+.webdev-takeaway {
+  font-family: "Libre Baskerville", serif !important;
+  font-weight: 500 !important;
+  font-size: 1.75rem !important;
+  color: #003DFF !important;
+}
+
+/* ios :hover fix */
+@media (hover: none) {
+  .g-nav li a:hover {
+    color: #1C1C1C;
+  }
+  .g-nav li a:hover::after {
+    width: 0%;
+    background-color: #1C1C1C;
+  }
+}/*# sourceMappingURL=focuspage-v2.css.map */

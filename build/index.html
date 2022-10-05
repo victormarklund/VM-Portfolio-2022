@@ -5,7 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./assets/css/index-v1.css">
+        <link rel="stylesheet" href="./assets/css/index-v2.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Libre+Baskerville:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -32,16 +32,16 @@
             <div class="g-nav-wrapper">
                 <ul class="g-nav">
                     <li>
-                        <a href="#home">home</a>
+                        <a class="navigation" href="#home">home</a>
                     </li>
                     <li>
-                        <a href="#work">work</a>
+                        <a class="navigation" href="#work">work</a>
                     </li>
                     <li>
-                        <a href="#about-me">about me</a>
+                        <a class="navigation" href="#about-me">about me</a>
                     </li>
                     <li>
-                        <a href="#say-hi">say hi!</a>
+                        <a class="navigation" href="#say-hi">say hi!</a>
                     </li>
                 </ul>
             </div>
@@ -50,16 +50,16 @@
         <main>
             <container id="home" class="flex-container">
                 <div class="home-wrapper">
-                    <p class="home-wrapper__intro">Hellö, my name is</p>
+                    <p class="body1 home-wrapper__intro">Hellö, my name is</p>
                     <div class="home-wrapper__victor">
                         <h1>Victor.</h1>
                         <img src="./assets/img/victory-hand_270c-fe0f.png" alt="">
                     </div>
                     <div class="home-wrapper__ihelp">
-                        <h2>I help make stuff.</h2>
+                        <h2 class="subtitle1">I like to make stuff.</h2>
                     </div>
                     <div class="home-wrapper__desc">
-                        <p>I'm a recent digital media graduate who is looking for a new creative home where I can grow, make friends and help make awesome things.</p>
+                        <p class="body1">I'm a recent digital media graduate who is looking for a new creative home where I can grow, make friends and help make awesome things.</p>
                     </div>
                 </div>
             </container>
@@ -68,32 +68,7 @@
             <container id="work" class="flex-container">
                 <div class="work-wrapper">
                     <h2>Some things I've made.</h2>
-                    <!--
-                    <p>(Click on the images to read more)</p>
-                    -->
-                    <!-- LJC -->
-                    <div class="work-card left">
-                        <a href="ljc.html">
-                            <img src="./assets/img/ljc-cover.png" alt="">
-                        </a>
-                        <div class="work-card-text">
-                            <h3>Lemon Juice Collective</br>(2020-2021)</h3>
-                            <p class="work-card-text__tasks"><strong>Role in team:</strong> founder, administration, planning and visuals</p>
-                            <p class="work-card-text__desc">A Discord community that I founded together with some friends at uni. The main goal was to help other creatives learn and grow together.</p>
-                        </div>
-                    </div>
-
-                    <!-- Jawima -->
-                    <div class="work-card right">
-                        <div class="work-card-text">
-                            <h3>Jawima Music</br>(2019-now)</h3>
-                            <p class="work-card-text__tasks"><strong>Solo project:</strong> Music production, mixing and mastering audio, designing cover art</p>
-                            <p class="work-card-text__desc">An ongoing passion project where I create music and release it for the world to hear. The music has been featured on playlists such as Lofi Beats by Spotify and BEATstrumentals by Apple Music.</p>
-                        </div>
-                        <a href="jawima.html">
-                            <img src="./assets/img/jwm-cover-comp.gif" alt="">
-                        </a>
-                    </div>
+                    <p class="description">(Click on the images to read more)</p>
 
                     <!-- Bloodmoon -->
                     <div class="work-card left">
@@ -102,8 +77,32 @@
                         </a>
                         <div class="work-card-text">
                             <h3>Bloodmoon</br>(2021)</h3>
-                            <p class="work-card-text__tasks"><strong>Role in team: </strong>UI and wireframes</p>
-                            <p class="work-card-text__desc">A concept that I helped make together with 3 other students at Umeå university. My main role consisted of developing the looks and UI.</p>
+                            <p class="description work-card-text__tasks"><strong>Role in team: </strong>UI and wireframes</p>
+                            <p class="body2 work-card-text__desc">A concept that I helped make together with 3 other students at Umeå university. My main role consisted of developing the looks and UI.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Jawima -->
+                    <div class="work-card right">
+                        <div class="work-card-text">
+                            <h3>Jawima Music</br>(2019-now)</h3>
+                            <p class="description work-card-text__tasks"><strong>Solo project:</strong> Music production, mixing and mastering audio, designing cover art</p>
+                            <p class="body2 work-card-text__desc">An ongoing passion project where I create music and release it for the world to hear. The music has been featured on playlists such as Lofi Beats by Spotify and BEATstrumentals by Apple Music.</p>
+                        </div>
+                        <a href="jawima.html">
+                            <img src="./assets/img/jwm-cover-comp.gif" alt="">
+                        </a>
+                    </div>
+
+                    <!-- LJC -->
+                    <div class="work-card left">
+                        <a href="ljc.html">
+                            <img src="./assets/img/ljc-cover.png" alt="">
+                        </a>
+                        <div class="work-card-text">
+                            <h3>Lemon Juice Collective</br>(2020-2021)</h3>
+                            <p class="description work-card-text__tasks"><strong>Role in team:</strong> founder, administration, planning and visuals</p>
+                            <p class="body2 work-card-text__desc">A Discord community that I founded together with some friends at uni. The main goal was to help other creatives learn and grow together.</p>
                         </div>
                     </div>
 
@@ -111,8 +110,8 @@
                     <div class="work-card right">
                         <div class="work-card-text">
                             <h3>This website</br>(2022)</h3>
-                            <p class="work-card-text__tasks"><strong>Solo project: </strong>design and development</p>
-                            <p class="work-card-text__desc">A personal project where I designed and built this website using HTML, CSS and JS.</p>
+                            <p class="description work-card-text__tasks"><strong>Solo project: </strong>design and development</p>
+                            <p class="body2 work-card-text__desc">A personal project where I designed and built this website using HTML, CSS/Sass and JS.</p>
                         </div>
                         <a href="thiswebsite.html">
                             <img src="./assets/img/thiswebsite-cover.png" alt="">
@@ -129,7 +128,7 @@
                     </div>
                     <h2>About me.</h2>
                     <div>
-                        <p>I am a curious 23 year old dude who is currently living in Luleå, Sweden together with my lovely partner. When I'm not doing stuff together with her, I spend most of my free time making music, playing video games, or learning new skills. I really value personal growth, so naturally I do everything I can to hold on to that childish urge to try new things.</br></br>I'm currently learning: React.js, basic cooking.</p>
+                        <p class="body1">I am a curious 23 year old dude who is currently living in Luleå, Sweden together with my lovely partner. When I'm not doing stuff together with her, I spend most of my free time making music, playing video games, or learning new skills. I really value personal growth, so naturally I do everything I can to hold on to that childish urge to try new things.</br></br>I studied digital media production for three years at Umeå university between 2019-2022. During that time I learned a lot about collaborating and the fun of having people around you to bounce ideas with. My time at uni also kept me occupied with lots of hobby-projects together with my classmates.</br></br><strong>Some stuff I know and still learning: </strong>Adobe Creative Cloud, UX / UI design and prototyping, front-end programming, 2D animation, music production, sound design, audio mixing / mastering.</br></br><strong>Some new things I'm currently learning: </strong>React.js, basic cooking.</p>
                     </div>
                 </div>
             </container>
@@ -139,17 +138,17 @@
                 <div class="say-hi-wrapper">
                     <h2>Let's work together!</h2>
                     <div class="say-hi__links">
-                        <a href="mailto:victormarklundd@gmail.com" target="_blank" rel="noopener noreferrer">mail</a>
-                        <p>or</p>
-                        <a href="https://www.linkedin.com/in/victor-marklund-3165121a2/" target="_blank" rel="noopener noreferrer">linkedin</a>
+                        <a class="socials" href="mailto:victormarklundd@gmail.com" target="_blank" rel="noopener noreferrer">mail</a>
+                        <p class="subtitle1">or</p>
+                        <a class="socials" href="https://www.linkedin.com/in/victor-marklund-3165121a2/" target="_blank" rel="noopener noreferrer">linkedin</a>
                     </div>
                 </div>
             </container>
         </main>
 
         <footer>
-            <p class="footer__credits footer__credits__left">Built by me</p>
-            <p class="footer__credits footer__credits__right">2022</p>
+            <p class="credits footer__credits footer__credits__left">Built by me</p>
+            <p class="credits footer__credits footer__credits__right">2022</p>
         </footer>
 
         <script src="./assets/js/jquery-3.6.1.min.js"></script>
