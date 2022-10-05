@@ -50,14 +50,14 @@ $fw-bold: 700;
 $fw-extraBold: 800;
 $fw-black: 900;
 // font size
-$fs-headline1: 3.5rem;
-$fs-headline2: 1.75rem;
-$fs-headline3: 1.50rem;
-$fs-subtitle1: 1.50rem;
+$fs-headline1: 4.5rem;
+$fs-headline2: 2.25rem;
+$fs-headline3: 2rem;
+$fs-subtitle1: 2.25rem;
 $fs-subtitle2: 1.25rem;
-$fs-body1: 1.0rem;
-$fs-body2: 0.85rem;
-$fs-description: 0.75rem;
+$fs-body1: 1.2rem;
+$fs-body2: 1rem;
+$fs-description: 0.85rem;
 $fs-navigation: 1.0rem;
 $fs-socials: 3.5rem;
 $fs-credits: 0.75rem;
@@ -98,9 +98,9 @@ h3 {
 }
 // subtitle1
 p.subtitle1, h2.subtitle1 {
-    font-weight: $fw-semiBold;
+    font-weight: $fw-medium;
     font-size: $fs-subtitle1;
-    letter-spacing: 0.009rem;
+    letter-spacing: -0.031rem;
 }
 // subtitle2
 p.subtitle2 {
@@ -276,6 +276,7 @@ footer {
 // home
 .home-wrapper {
     width: 50vw;
+    min-width: 300px;
 }
 .home-wrapper h1 {
     font-family: $ff-secondary;
@@ -298,7 +299,7 @@ footer {
     white-space: nowrap;
 }
 .home-wrapper__desc {
-    min-width: 200px;
+    min-width: 250px;
     max-width: 50%;
 }
 
@@ -361,6 +362,7 @@ footer {
     background-color: $clr-onBackground;
 }
 .work-card-text__tasks {
+    margin-top: 5px;
     padding-bottom: 10px;
 }
 // mobile: work cards
@@ -401,6 +403,7 @@ footer {
 // about me
 .about-me-wrapper {
     width: 50vw;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
 }
@@ -417,6 +420,7 @@ footer {
 // say hi!
 .say-hi-wrapper {
     width: 50vw;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
 }

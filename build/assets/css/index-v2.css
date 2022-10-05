@@ -20,26 +20,26 @@ h1, h2, h3, h4, h5, h6, p, span, a, pre {
 
 h1 {
   font-weight: 700;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   letter-spacing: -0.094rem;
 }
 
 h2 {
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   letter-spacing: -0.031rem;
 }
 
 h3 {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 2rem;
   letter-spacing: 0rem;
 }
 
 p.subtitle1, h2.subtitle1 {
-  font-weight: 600;
-  font-size: 1.5rem;
-  letter-spacing: 0.009rem;
+  font-weight: 500;
+  font-size: 2.25rem;
+  letter-spacing: -0.031rem;
 }
 
 p.subtitle2 {
@@ -50,19 +50,19 @@ p.subtitle2 {
 
 p.body1 {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.2rem;
   letter-spacing: 0.031rem;
 }
 
 p.body2 {
   font-weight: 400;
-  font-size: 0.85rem;
+  font-size: 1rem;
   letter-spacing: 0.031rem;
 }
 
 p.description {
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   letter-spacing: 0.025rem;
 }
 
@@ -211,6 +211,7 @@ footer {
 
 .home-wrapper {
   width: 50vw;
+  min-width: 300px;
 }
 
 .home-wrapper h1 {
@@ -225,7 +226,7 @@ footer {
 }
 
 .home-wrapper__victor img {
-  height: 3.5rem;
+  height: 4.5rem;
   transform: translateY(0.5rem);
   transform-origin: center bottom;
 }
@@ -239,7 +240,7 @@ footer {
 }
 
 .home-wrapper__desc {
-  min-width: 200px;
+  min-width: 250px;
   max-width: 50%;
 }
 
@@ -306,6 +307,7 @@ footer {
 }
 
 .work-card-text__tasks {
+  margin-top: 5px;
   padding-bottom: 10px;
 }
 
@@ -343,6 +345,7 @@ footer {
 }
 .about-me-wrapper {
   width: 50vw;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
 }
@@ -359,6 +362,7 @@ footer {
 
 .say-hi-wrapper {
   width: 50vw;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
 }
