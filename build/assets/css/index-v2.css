@@ -51,7 +51,7 @@ p.subtitle2 {
 p.body1 {
   font-weight: 400;
   font-size: 1.2rem;
-  letter-spacing: 0.031rem;
+  letter-spacing: 0.02rem;
 }
 
 p.body2 {
@@ -246,7 +246,7 @@ footer {
 
 .work-wrapper {
   width: 50vw;
-  min-width: 700px;
+  min-width: 950px;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -260,7 +260,7 @@ footer {
 .work-card {
   position: relative;
   width: 100%;
-  min-height: 200px;
+  min-height: 250px;
   margin-top: 20px;
   display: flex;
   flex-direction: row;
@@ -277,7 +277,7 @@ footer {
 }
 
 .work-card a img {
-  height: 200px;
+  height: 250px;
   transition: 0.1s all ease;
   box-shadow: 0px 0px #1C1C1C;
 }
@@ -288,8 +288,8 @@ footer {
 }
 
 .work-card-text {
-  width: 50%;
-  min-height: 200px;
+  width: 70%;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
   margin-top: 0;
@@ -317,20 +317,20 @@ footer {
   }
   .work-card {
     width: 60vw;
-    min-height: 200px;
+    min-height: 250px;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
   }
   .work-card a img {
     order: 1;
-    height: 180px;
+    height: 300px;
   }
   .work-card-text {
     order: 2;
-    max-width: 50%;
+    width: 100%;
     min-width: 300px;
-    min-height: 200px;
+    min-height: 250px;
     margin-top: 20px;
     justify-content: left;
   }
@@ -344,6 +344,7 @@ footer {
   }
 }
 .about-me-wrapper {
+  margin-top: 50px;
   width: 50vw;
   min-width: 300px;
   display: flex;

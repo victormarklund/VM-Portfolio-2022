@@ -70,9 +70,9 @@ $navbar-menu-space-desktop: 10px;
 $navbar-menu-space-mobile: 5px;
 // work cards
 $workcard-padding: 20px;
-$workcard-heigth: 200px;
+$workcard-heigth: 250px;
 $workcard-heigth-mobile: 350px;
-$workcard-imgHeigth-mobile: 180px;
+$workcard-imgHeigth-mobile: 300px;
 $workcard-marginTop-mobile: 50px;
 
 
@@ -112,7 +112,7 @@ p.subtitle2 {
 p.body1 {
     font-weight: $fw-regular;
     font-size: $fs-body1;
-    letter-spacing: 0.031rem;
+    letter-spacing: 0.020rem;
 }
 // body2
 p.body2 {
@@ -307,7 +307,7 @@ footer {
 // work
 .work-wrapper {
     width: 50vw;
-    min-width: 700px;
+    min-width: 950px;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -345,7 +345,7 @@ footer {
     box-shadow: 10px 10px $clr-secondary;
 }
 .work-card-text{
-    width: 50%;
+    width: 70%;
     min-height: $workcard-heigth;
     display: flex;
     flex-direction: column;
@@ -383,7 +383,7 @@ footer {
     }
     .work-card-text{
         order: 2;
-        max-width: 50%;
+        width: 100%;
         min-width: 300px;
         min-height: $workcard-heigth;
         margin-top: $workcard-padding;
@@ -402,6 +402,7 @@ footer {
 
 // about me
 .about-me-wrapper {
+    margin-top: 50px;
     width: 50vw;
     min-width: 300px;
     display: flex;
