@@ -28,21 +28,24 @@ h2 {
   font-weight: 700;
   font-size: 2.25rem;
   letter-spacing: -0.031rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-weight: 600;
   font-size: 2rem;
   letter-spacing: 0rem;
+  line-height: 1.2;
 }
 
 p.subtitle1, h2.subtitle1 {
-  font-weight: 500;
-  font-size: 2.25rem;
+  font-weight: 300;
+  font-family: "Inter", sans-serif;
+  font-size: 1.75rem;
   letter-spacing: -0.031rem;
 }
 
-p.subtitle2 {
+p.subtitle2, h2.subtitle2 {
   font-weight: 400;
   font-size: 1.25rem;
   letter-spacing: 0.006rem;
@@ -51,18 +54,22 @@ p.subtitle2 {
 p.body1 {
   font-weight: 400;
   font-size: 1.2rem;
-  letter-spacing: 0.02rem;
+  letter-spacing: -0.015rem;
+  word-spacing: 0.04rem;
+  line-height: 1.5;
 }
 
 p.body2 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1rem;
-  letter-spacing: 0.031rem;
+  letter-spacing: -0.015rem;
+  word-spacing: 0.04rem;
+  line-height: 1.4;
 }
 
 p.description {
   font-weight: 400;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   letter-spacing: 0.025rem;
 }
 
@@ -214,8 +221,13 @@ footer {
   min-width: 300px;
 }
 
+.home-wrapper__intro {
+  line-height: 2;
+}
+
 .home-wrapper h1 {
   font-family: "Libre Baskerville", serif;
+  line-height: 0.8;
   display: inline;
 }
 
@@ -235,13 +247,18 @@ footer {
   display: inline;
 }
 
-.home-wrapper__ihelp {
+.home-wrapper__ihelp h2 {
   white-space: nowrap;
+  line-height: 2;
 }
 
 .home-wrapper__desc {
   min-width: 250px;
   max-width: 50%;
+}
+
+.home-wrapper__desc p.body1 {
+  line-height: 1.3 !important;
 }
 
 .work-wrapper {
@@ -255,6 +272,10 @@ footer {
 .work-wrapper h2 {
   margin-top: 100px;
   text-align: left;
+}
+
+.work-wrapper__tip {
+  transform: translateY(-1rem);
 }
 
 .work-card {
@@ -303,6 +324,7 @@ footer {
   width: 100%;
   height: 1px;
   display: block;
+  transform: translateY(0.1rem);
   background-color: #1C1C1C;
 }
 
@@ -344,7 +366,7 @@ footer {
   }
 }
 .about-me-wrapper {
-  margin-top: 50px;
+  margin-top: 150px;
   width: 50vw;
   min-width: 300px;
   display: flex;
@@ -415,6 +437,13 @@ footer {
     color: #1C1C1C;
   }
   .g-nav li a:hover::after {
+    width: 0%;
+    background-color: #1C1C1C;
+  }
+  .socials:hover {
+    color: #1C1C1C;
+  }
+  .socials:hover::after {
     width: 0%;
     background-color: #1C1C1C;
   }
