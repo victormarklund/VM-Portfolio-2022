@@ -53,11 +53,11 @@ $fw-black: 900;
 $fs-headline1: 4.5rem;
 $fs-headline2: 2.25rem;
 $fs-headline3: 2rem;
-$fs-subtitle1: 2.25rem;
+$fs-subtitle1: 1.75rem;
 $fs-subtitle2: 1.25rem;
 $fs-body1: 1.2rem;
 $fs-body2: 1rem;
-$fs-description: 0.85rem;
+$fs-description: 0.75rem;
 $fs-navigation: 1.0rem;
 $fs-socials: 3.5rem;
 $fs-credits: 0.75rem;
@@ -89,21 +89,24 @@ h2 {
     font-weight: $fw-bold;
     font-size: $fs-headline2;
     letter-spacing: -0.031rem;
+    margin-bottom: 1rem;
 }
 // headline3
 h3 {
     font-weight: $fw-semiBold;
     font-size: $fs-headline3;
     letter-spacing: 0rem;
+    line-height: 1.2;
 }
 // subtitle1
 p.subtitle1, h2.subtitle1 {
-    font-weight: $fw-medium;
+    font-weight: $fw-light;
+    font-family: $ff-primary;
     font-size: $fs-subtitle1;
     letter-spacing: -0.031rem;
 }
 // subtitle2
-p.subtitle2 {
+p.subtitle2, h2.subtitle2 {
     font-weight: $fw-regular;
     font-size: $fs-subtitle2;
     letter-spacing: 0.006rem;
@@ -112,13 +115,17 @@ p.subtitle2 {
 p.body1 {
     font-weight: $fw-regular;
     font-size: $fs-body1;
-    letter-spacing: 0.020rem;
+    letter-spacing: -0.015rem;
+    word-spacing: 0.04rem;
+    line-height: 1.5;
 }
 // body2
 p.body2 {
-    font-weight: $fw-regular;
+    font-weight: $fw-light;
     font-size: $fs-body2;
-    letter-spacing: 0.031rem;
+    letter-spacing: -0.015rem;
+    word-spacing: 0.04rem;
+    line-height: 1.4;
 }
 // description
 p.description {
@@ -278,8 +285,12 @@ footer {
     width: 50vw;
     min-width: 300px;
 }
+.home-wrapper__intro {
+    line-height: 2.0;
+}
 .home-wrapper h1 {
     font-family: $ff-secondary;
+    line-height: 0.8;
     display: inline;
 }
 .home-wrapper__victor {
@@ -295,12 +306,16 @@ footer {
 .home-wrapper h2 {
     display: inline;
 }
-.home-wrapper__ihelp {
+.home-wrapper__ihelp h2 {
     white-space: nowrap;
+    line-height: 2.0;
 }
 .home-wrapper__desc {
     min-width: 250px;
     max-width: 50%;
+}
+.home-wrapper__desc p.body1 {
+    line-height: 1.3 !important;
 }
 
 
@@ -316,7 +331,9 @@ footer {
     margin-top: 100px;
     text-align: left;
 }
-
+.work-wrapper__tip {
+    transform: translateY(-1rem);
+}
 
 // work cards
 .work-card {
@@ -359,6 +376,7 @@ footer {
     width: 100%;
     height: 1px;
     display: block;
+    transform: translateY(0.1rem);
     background-color: $clr-onBackground;
 }
 .work-card-text__tasks {
@@ -402,7 +420,7 @@ footer {
 
 // about me
 .about-me-wrapper {
-    margin-top: 50px;
+    margin-top: 150px;
     width: 50vw;
     min-width: 300px;
     display: flex;
@@ -468,6 +486,13 @@ footer {
         color: $clr-onBackground;
     }
     .g-nav li a:hover::after {
+        width: 0%;
+        background-color: $clr-onBackground;
+    }
+    .socials:hover {
+        color: $clr-onBackground;
+    }
+    .socials:hover::after {
         width: 0%;
         background-color: $clr-onBackground;
     }
